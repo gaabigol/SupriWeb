@@ -130,6 +130,22 @@ public class Client {
 	public void setSex(Sex sex) {
 		this.sex = sex;
 	}
+	
+	
+	
+
+	@Override
+	public String toString() {
+		return "id" + id 
+				+ ", name=" + name 
+				+ ", cpf=" + cpf 
+				+ ", birthDate=" + birthDate 
+				+ ", telephone="+ telephone 
+				+ ", cellphone=" + cellphone 
+				+ ", email=" + email 
+				+ ", active=" + active 
+				+ ", sex=" + sex;
+	}
 
 	@Override
 	public int hashCode() {

@@ -9,8 +9,10 @@ import com.supriweb.supriweb.model.Client;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
+import jakarta.transaction.Transactional;
 
 @Repository
+@Transactional
 public class ClientDAO implements CRUD<Client, Long> {
 
 	@PersistenceContext
@@ -40,7 +42,8 @@ public class ClientDAO implements CRUD<Client, Long> {
 
 	@Override
 	public void remove(Client client) {
-		entityManager.remove(client);
+		if (entityManager.contains(client)) {
+			entityManager.remove(client);
+		}
 	}
-
 }
