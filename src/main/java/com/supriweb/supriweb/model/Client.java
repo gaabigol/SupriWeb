@@ -41,24 +41,6 @@ public class Client {
 	@Enumerated(EnumType.STRING)
 	private Sex sex;
 
-	
-	public Client() {
-
-	}
-
-	public Client(long id, String name, String cpf, LocalDate birthDate, String telephone, String cellphone,
-			String email, boolean active, Sex sex) {
-		this.id = id;
-		this.name = name;
-		this.cpf = cpf;
-		this.birthDate = birthDate;
-		this.telephone = telephone;
-		this.cellphone = cellphone;
-		this.email = email;
-		this.active = active;
-		this.sex = sex;
-	}
-
 	public long getId() {
 		return id;
 	}
@@ -130,21 +112,11 @@ public class Client {
 	public void setSex(Sex sex) {
 		this.sex = sex;
 	}
-	
-	
-	
 
 	@Override
 	public String toString() {
-		return "id" + id 
-				+ ", name=" + name 
-				+ ", cpf=" + cpf 
-				+ ", birthDate=" + birthDate 
-				+ ", telephone="+ telephone 
-				+ ", cellphone=" + cellphone 
-				+ ", email=" + email 
-				+ ", active=" + active 
-				+ ", sex=" + sex;
+		return "id" + id + ", name=" + name + ", cpf=" + cpf + ", birthDate=" + birthDate + ", telephone=" + telephone
+				+ ", cellphone=" + cellphone + ", email=" + email + ", active=" + active + ", sex=" + sex;
 	}
 
 	@Override
